@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div id="userInput">
+        Player 1<input type="text" id="p1Input"><br>
+        Player 2<input type="text" id="p2Input"><br>
+        <input type="submit" onclick="play();">
+    </div>
+
+<script>
+
+    function play(){
+        var p1Input = document.getElementById("p1Input").value;
+        var p2Input = document.getElementById("p2Input").value;
+        
+        if(p1Input == "rock" && p2Input == "scissors" || p1Input == "scissors" && p2Input == "rock"){
+            window.alert("Rock Wins");
+        }else if(p1Input == "scissors" && p2Input == "paper" || p1Input == "paper" && p2Input == "scissors"){
+            window.alert("Scissors Wins");
+        }else if(p1Input == "paper" && p2Input == "rock" || p1Input == "rock" && p2Input == "paper"){
+            window.alert("Paper Wins");
+        }else{
+            window.alert("Player Input is wrong!");
+        }
+        
+    }
+
+</script>
+
+</body>
+</html>
